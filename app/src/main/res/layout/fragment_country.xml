@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back"
+    tools:context=".NepalFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Confirmed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="bottom|center_horizontal"
+                android:text="Confirmed"
+                android:textColor="@color/text_yellow"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvConfirmed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvConfirmed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTodayCases"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Confirmed"
+                tools:text="789002673421" />
+
+            <TextView
+                android:id="@+id/tvTodayCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_yellow"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvConfirmed"
+                app:layout_constraintStart_toStartOf="@+id/tvConfirmed"
+                app:layout_constraintTop_toBottomOf="@+id/tvConfirmed"
+                tools:text="+243" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/main_back"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Active"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/card_color"
+                android:fontFamily="monospace"
+                android:gravity="bottom|center_horizontal"
+                android:text="Active"
+                android:textColor="@color/text_sky"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvActive"
+                app:layout_constraintEnd_toStartOf="@+id/Recovered"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/Recovered"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/card_color"
+                android:gravity="bottom|center_horizontal"
+                android:text="Recovered"
+                android:textColor="@color/text_sky"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvRecovered"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/Active"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvActive"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvRecovered"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Active"
+                tools:text="789002" />
+
+            <TextView
+                android:id="@+id/tvTodayRecovered"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/text_sky"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvRecovered"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvActive"
+                app:layout_constraintTop_toBottomOf="@+id/tvRecovered"
+                tools:text="+4563" />
+
+            <TextView
+                android:id="@+id/tvRecovered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTodayRecovered"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvActive"
+                app:layout_constraintTop_toBottomOf="@+id/Recovered"
+                tools:text="789002" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/main_back"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/Deceased"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/card_color"
+                android:gravity="bottom|center_horizontal"
+                android:text="Deceased"
+                android:textColor="@color/text_red"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvDeceased"
+                app:layout_constraintEnd_toStartOf="@+id/SamplesTested"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/SamplesTested"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/card_color"
+                android:gravity="bottom|center_horizontal"
+                android:text="Samples Tested"
+                android:textColor="@color/text_red"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvSamplesTested"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/Deceased"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTodayDeaths"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvDeceased"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/tvDeceased"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeceased"
+                tools:text="+980" />
+
+            <TextView
+                android:id="@+id/tvDeceased"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTodayDeaths"
+                app:layout_constraintEnd_toStartOf="@+id/tvSamplesTested"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Deceased"
+                tools:text="789002" />
+
+            <TextView
+                android:id="@+id/tvSamplesTested"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal|top"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTodalSamples"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvDeceased"
+                app:layout_constraintTop_toBottomOf="@+id/SamplesTested"
+                tools:text="789002" />
+
+            <TextView
+                android:id="@+id/tvTodalSamples"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/card_color"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvSamplesTested"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvDeceased"
+                app:layout_constraintTop_toBottomOf="@+id/tvSamplesTested"
+                tools:text="+459033" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPopulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/Population"
+                app:layout_constraintTop_toTopOf="@+id/Population"
+                tools:text="1,31,56,23,45,678" />
+
+            <ImageView
+                android:id="@+id/imageViewCountryImage"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/Country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="monospace"
+                android:text="Country:"
+                android:textColor="@color/text_sky"
+                app:layout_constraintBottom_toTopOf="@+id/Population"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCountryImage"
+                app:layout_constraintTop_toTopOf="@+id/imageViewCountryImage" />
+
+            <TextView
+                android:id="@+id/Population"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Population:"
+                android:textColor="@color/text_sky"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewCountryImage"
+                app:layout_constraintStart_toStartOf="@+id/Country"
+                app:layout_constraintTop_toBottomOf="@+id/Country" />
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/Country"
+                app:layout_constraintTop_toTopOf="@+id/Country"
+                tools:text="Nepal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
